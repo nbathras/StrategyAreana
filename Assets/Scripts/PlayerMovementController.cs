@@ -1,7 +1,7 @@
 ﻿using Mirror;
 using UnityEngine;
 
-public class PlayerController : NetworkBehaviour {
+public class PlayerMovementController : NetworkBehaviour {
 
     [SerializeField] private float speed;
 
