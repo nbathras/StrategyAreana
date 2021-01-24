@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Mirror;
+using UnityEngine;
 
 public class Bullet : MonoBehaviour {
     
@@ -10,6 +11,7 @@ public class Bullet : MonoBehaviour {
         Vector3 normalizedDirection = targetPosition - spawnPosition;
 
         bullet.normalizedDirection = new Vector3(normalizedDirection.x, normalizedDirection.y, 0f).normalized;
+        NetworkServer.Spawn(bullet.gameObject);
 
         return bullet;
     }
